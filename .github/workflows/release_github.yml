@@ -22,7 +22,7 @@ jobs:
       POETRY_VIRTUALENVS_CREATE: false
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python ${{ env.BUILD_PYTHON_VERSION }}
         uses: actions/setup-python@v4
@@ -56,7 +56,7 @@ jobs:
     needs: build_python
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Load release python requirements
         uses: actions/download-artifact@v3
@@ -94,7 +94,7 @@ jobs:
     needs: build_python
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Load release python requirements
         uses: actions/download-artifact@v3
@@ -128,7 +128,7 @@ jobs:
     needs: build_python
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Load release python packages
         uses: actions/download-artifact@v3
@@ -161,7 +161,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Extract release notes
         id: extract-release-notes
