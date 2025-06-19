@@ -134,11 +134,11 @@ jobs:
           tag: ${{ github.event.inputs.tag }}
 
       - name: Create Release workflow_dispatch
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.tag != ''
         uses: ncipollo/release-action@v1
         with:
           body: ${{ steps.extract-release-notes.outputs.release_notes }}
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
           draft: true
-          tag: ${{ github.event.inputs.tag || github.ref_name }}
+          tag: ${{ github.event.inputs.tag }}
