@@ -141,4 +141,3 @@ jobs:
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
           draft: true
-          tag: ${{ github.event.inputs.tag }}
