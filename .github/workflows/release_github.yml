@@ -87,7 +87,7 @@ jobs:
           path: dist
 
   release:
-    if: github.event_name == 'push' || github.event.inputs.tag != ''
+    if: github.event_name == 'push' || github.event.inputs.tag != '' || github.event_name == 'workflow_dispatch'
     needs: [build_win]
     runs-on: ubuntu-latest
     steps:
