@@ -130,6 +130,6 @@ jobs:
           body: ${{ steps.extract-release-notes.outputs.release_notes }}
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
-          draft: true
+          draft: false
           tag: ${{ github.event.inputs.tag }}
 
