@@ -30,7 +30,7 @@ classifiers = [
 gridplayer = "gridplayer.__main__:main"
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.9"
 PyQt5 = "5.15.7"
 PyQt5-Qt5 = "5.15.2"
 pydantic = "^1.8.2"
